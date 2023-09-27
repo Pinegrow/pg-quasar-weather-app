@@ -25,7 +25,7 @@
    "devDependencies": {
       "@babel/eslint-parser": "^7.13.14",
       "@iconify/json": "^2.1.65",
-      "@pinegrow/vite-plugin": "^3.0.19",
+      "@pinegrow/vite-plugin": "^3.0.21",
       "@quasar/app-vite": "^1.1.2",
       "@unocss/preset-icons": "^0.39.3",
       "autoprefixer": "^10.4.2",
