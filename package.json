@@ -7,7 +7,11 @@
    "private": true,
    "scripts": {
       "dev": "quasar dev",
+      "now": "npm run build && npm run preview",
+      "lighthouse:dev": "npx unlighthouse --no-cache --site http://localhost:9000",
+      "lighthouse": "npx unlighthouse --no-cache --site https://pg-quasar-weather-app.netlify.app",
       "build": "quasar build",
+      "preview": "quasar preview",
       "lint": "eslint --ext .js,.vue ./",
       "test": "echo \"No test specified\" && exit 0",
       "icons": "icongenie g -i icon.png --theme-color 00B4DB --skip-trim"
