@@ -17,10 +17,10 @@
       "icons": "icongenie g -i icon.png --theme-color 00B4DB --skip-trim"
    },
    "dependencies": {
-      "@quasar/extras": "^1.15.4",
+      "@quasar/extras": "^1.16.8",
       "axios": "^0.21.1",
       "core-js": "^3.6.5",
-      "quasar": "^2.9.2",
+      "quasar": "^2.13.1",
       "vue": "^3.2.40",
       "vue-i18n": "^9.0.0",
       "vue-router": "^4.1.6",
@@ -30,7 +30,7 @@
       "@babel/eslint-parser": "^7.13.14",
       "@iconify/json": "^2.1.65",
       "@pinegrow/vite-plugin": "^3.0.29",
-      "@quasar/app-vite": "^1.1.2",
+      "@quasar/app-vite": "^1.6.2",
       "@unocss/preset-icons": "^0.57.2",
       "autoprefixer": "^10.4.2",
       "electron": "^15.0.0",
@@ -56,5 +56,15 @@
       "node": ">= 12.22.1",
       "npm": ">= 6.13.4",
       "yarn": ">= 1.21.1"
+   },
+   "pnpm": {
+      "overrides": {
+         "vite": "^4.0.0",
+         "@vitejs/plugin-vue": "^4.0.0"
+      }
+   },
+   "overrides": {
+      "vite": "^4.0.0",
+      "@vitejs/plugin-vue": "^4.0.0"
    }
 }
