@@ -31,7 +31,7 @@
       "@iconify/json": "^2.1.65",
       "@pinegrow/vite-plugin": "^3.0.29",
       "@quasar/app-vite": "^1.6.2",
-      "@unocss/preset-icons": "^0.57.2",
+      "@unocss/preset-icons": "^0.57.3",
       "autoprefixer": "^10.4.2",
       "electron": "^15.0.0",
       "electron-packager": "^15.2.0",
@@ -39,7 +39,7 @@
       "eslint-config-prettier": "^8.1.0",
       "eslint-plugin-vue": "^8.5.0",
       "prettier": "^2.5.1",
-      "unocss": "^0.57.2"
+      "unocss": "^0.57.3"
    },
    "browserslist": [
       "last 10 Chrome versions",

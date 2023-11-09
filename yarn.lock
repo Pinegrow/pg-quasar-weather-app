@@ -732,7 +732,7 @@
   dependencies:
     "@unocss/core" "0.57.3"
 
-"@unocss/preset-icons@^0.57.2", "@unocss/preset-icons@0.57.3":
+"@unocss/preset-icons@^0.57.3", "@unocss/preset-icons@0.57.3":
   version "0.57.3"
   resolved "https://registry.npmjs.org/@unocss/preset-icons/-/preset-icons-0.57.3.tgz"
   integrity sha512-cG7gaFQzSidHS+nHPV9HEB3aaUVs/PjZywxMl5jwkJIWHuFMU/SQZXMorH6avU2jH8PoYkRZfjLdRWA+h/+fPA==
@@ -4276,7 +4276,7 @@ universalify@^2.0.0:
   resolved "https://registry.npmjs.org/universalify/-/universalify-2.0.0.tgz"
   integrity sha512-hAZsKq7Yy11Zu1DE0OzWjw7nnLZmJZYTDZZyEFHZdUhV8FkH5MCfoU1XMaxXovpyW5nq5scPqq0ZDP9Zyl04oQ==
 
-unocss@^0.57.2:
+unocss@^0.57.3:
   version "0.57.3"
   resolved "https://registry.npmjs.org/unocss/-/unocss-0.57.3.tgz"
   integrity sha512-reIvKa1sG9bwRZ6oGwj8p2XZSmT5On/NEisqkxsk1vTV5ZHIagbilG3aNMb5vNcI7MhRb4dy0Z4cvyNGd3194Q==
