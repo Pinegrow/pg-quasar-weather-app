@@ -426,10 +426,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@pinegrow/vite-plugin@^3.0.29":
-  version "3.0.29"
-  resolved "https://registry.npmjs.org/@pinegrow/vite-plugin/-/vite-plugin-3.0.29.tgz"
-  integrity sha512-wimWCsGHEM6J6t3Y+tPpv2ItAA0gWL3I4RrjnpChYtWhNud0VJ/YmQUN/eVfVTUImkVJcqJ53Q1cAVsSlm137Q==
+"@pinegrow/vite-plugin@^3.0.34":
+  version "3.0.34"
+  resolved "https://registry.npmjs.org/@pinegrow/vite-plugin/-/vite-plugin-3.0.34.tgz"
+  integrity sha512-lR6DBqXX2zK3wrxZuzqDVeUpmagoNT/s5+NFIinkAkf/JX9AcZ1DziMO3YbOOq31IPHIPsHSf2clGE0ZhYlGnA==
   dependencies:
     "@vue/compiler-sfc" "^3.2.45"
     magic-string "^0.27.0"
