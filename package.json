@@ -17,10 +17,10 @@
       "icons": "icongenie g -i icon.png --theme-color 00B4DB --skip-trim"
    },
    "dependencies": {
-      "@quasar/extras": "^1.16.8",
+      "@quasar/extras": "^1.16.9",
       "axios": "^0.21.1",
       "core-js": "^3.6.5",
-      "quasar": "^2.13.1",
+      "quasar": "^2.14.1",
       "vue": "^3.2.40",
       "vue-i18n": "^9.0.0",
       "vue-router": "^4.1.6",
@@ -30,7 +30,7 @@
       "@babel/eslint-parser": "^7.13.14",
       "@iconify/json": "^2.1.65",
       "@pinegrow/vite-plugin": "^3.0.34",
-      "@quasar/app-vite": "^1.6.2",
+      "@quasar/app-vite": "^1.7.0",
       "@unocss/preset-icons": "^0.57.3",
       "autoprefixer": "^10.4.2",
       "electron": "^15.0.0",
