@@ -1,2 +1,3 @@
-export function someGetter (/* state */) {
-}
+/* eslint-disable @typescript-eslint/no-empty-function */
+
+export function someGetter(/* state */) {}

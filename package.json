@@ -1,70 +1,91 @@
 {
-   "name": "dannys-weather-app-v2",
-   "version": "0.0.1",
-   "description": "A Quasar Framework app",
-   "productName": "Quasar App",
-   "author": "Troy Moreland <49797484+34fame@users.noreply.github.com>",
-   "private": true,
-   "scripts": {
-      "dev": "quasar dev",
-      "now": "npm run build && npm run preview",
-      "lighthouse:dev": "npx unlighthouse --no-cache --site http://localhost:9000",
-      "lighthouse": "npx unlighthouse --no-cache --site https://pg-quasar-weather-app.netlify.app",
-      "build": "quasar build",
-      "preview": "quasar preview",
-      "lint": "eslint --ext .js,.vue ./",
-      "test": "echo \"No test specified\" && exit 0",
-      "icons": "icongenie g -i icon.png --theme-color 00B4DB --skip-trim"
-   },
-   "dependencies": {
-      "@quasar/extras": "^1.16.9",
-      "axios": "^0.21.1",
-      "core-js": "^3.6.5",
-      "quasar": "^2.14.1",
-      "vue": "^3.2.40",
-      "vue-i18n": "^9.0.0",
-      "vue-router": "^4.1.6",
-      "vuex": "^4.0.1"
-   },
-   "devDependencies": {
-      "@babel/eslint-parser": "^7.13.14",
-      "@iconify/json": "^2.1.65",
-      "@pinegrow/vite-plugin": "^3.0.34",
-      "@quasar/app-vite": "^1.7.0",
-      "@unocss/preset-icons": "^0.57.3",
-      "autoprefixer": "^10.4.2",
-      "electron": "^15.0.0",
-      "electron-packager": "^15.2.0",
-      "eslint": "^8.10.0",
-      "eslint-config-prettier": "^8.1.0",
-      "eslint-plugin-vue": "^8.5.0",
-      "prettier": "^2.5.1",
-      "unocss": "^0.57.3"
-   },
-   "browserslist": [
-      "last 10 Chrome versions",
-      "last 10 Firefox versions",
-      "last 4 Edge versions",
-      "last 7 Safari versions",
-      "last 8 Android versions",
-      "last 8 ChromeAndroid versions",
-      "last 8 FirefoxAndroid versions",
-      "last 10 iOS versions",
-      "last 5 Opera versions"
-   ],
-   "engines": {
-      "node": ">= 12.22.1",
-      "npm": ">= 6.13.4",
-      "yarn": ">= 1.21.1"
-   },
-   "pnpm": {
-      "overrides": {
-         "vite": "^4.0.0",
-         "@vitejs/plugin-vue": "^4.0.0"
-      }
-   },
-   "overrides": {
+  "name": "dannys-weather-app-v2",
+  "version": "0.0.1",
+  "description": "A Quasar Project",
+  "productName": "Quasar App",
+  "author": "Troy Moreland <49797484+34fame@users.noreply.github.com>",
+  "private": true,
+  "scripts": {
+    "dev": "quasar dev",
+    "dev:electron": "quasar dev -m electron",
+    "dev:ios": "quasar dev -m ios",
+    "dev:android": "quasar dev -m android",
+    "now": "npm run build && npm run preview",
+    "lighthouse:dev": "npx unlighthouse --no-cache --site http://localhost:9000",
+    "lighthouse": "npx unlighthouse --no-cache --site https://pg-quasar-weather-app.netlify.app",
+    "build": "quasar build",
+    "build:electron": "quasar build -m electron",
+    "build:ios": "quasar build -m ios",
+    "build:android": "quasar build -m android",
+    "preview": "quasar serve --history",
+    "lint": "eslint --ext .js,.ts,.vue ./  --ignore-path .gitignore",
+    "format": "prettier --write \"**/*.{js,ts,vue,css,html,md,json}\" --ignore-path .gitignore",
+    "test": "echo \"No test specified\" && exit 0",
+    "icons": "icongenie g -i icon.png --theme-color 00B4DB --skip-trim"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.16.9",
+    "axios": "^0.21.1",
+    "core-js": "^3.6.5",
+    "pinia": "^2.1.7",
+    "quasar": "^2.14.1",
+    "vue": "^3.2.40",
+    "vue-i18n": "^9.0.0",
+    "vue-router": "^4.1.6",
+    "vuex": "^4.0.1"
+  },
+  "devDependencies": {
+    "@iconify/json": "^2.2.175",
+    "@pinegrow/quasar-module": "^3.0.36",
+    "@quasar/app-vite": "^1.7.0",
+    "@types/node": "^20.11.10",
+    "@typescript-eslint/eslint-plugin": "^5.10.0",
+    "@typescript-eslint/parser": "^5.10.0",
+    "@unocss/preset-icons": "^0.58.4",
+    "@vue/devtools": "^6.5.1",
+    "autoprefixer": "^10.4.2",
+    "electron": "^15.0.0",
+    "electron-packager": "^15.2.0",
+    "eslint": "^8.11.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-vue": "^9.0.0",
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.4",
+    "unocss": "^0.58.4",
+    "unplugin-auto-import": "^0.17.5",
+    "unplugin-vue-components": "^0.26.0",
+    "workbox-build": "^7.0.0",
+    "workbox-cacheable-response": "^7.0.0",
+    "workbox-core": "^7.0.0",
+    "workbox-expiration": "^7.0.0",
+    "workbox-precaching": "^7.0.0",
+    "workbox-routing": "^7.0.0",
+    "workbox-strategies": "^7.0.0"
+  },
+  "browserslist": [
+    "last 10 Chrome versions",
+    "last 10 Firefox versions",
+    "last 4 Edge versions",
+    "last 7 Safari versions",
+    "last 8 Android versions",
+    "last 8 ChromeAndroid versions",
+    "last 8 FirefoxAndroid versions",
+    "last 10 iOS versions",
+    "last 5 Opera versions"
+  ],
+  "engines": {
+    "node": "^20 || ^18 || ^16",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  },
+  "pnpm": {
+    "overrides": {
       "vite": "^4.0.0",
       "@vitejs/plugin-vue": "^4.0.0"
-   }
+    }
+  },
+  "overrides": {
+    "vite": "^4.0.0",
+    "@vitejs/plugin-vue": "^4.0.0"
+  }
 }

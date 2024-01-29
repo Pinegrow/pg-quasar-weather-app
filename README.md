@@ -5,34 +5,34 @@ This project is a rewrite of Danny Connell's "Quasar V1: Weather App for Mobile,
 ## Install the dependencies
 
 ```bash
-yarn
+npm install
 ```
 
 ## Web (SPA)
 
--  To launch for development, run `quasar dev`
--  To build for production, run `quasar build`
+- To launch for development, run `npm run dev`
+- To build for production, run `npm run build`
 
 ## Desktop
 
--  To launch for development, run `quasar dev -m electron`
--  To build for production, run `quasar build -m electron`
+- To launch for development, run `npm run dev:electron`
+- To build for production, run `npm run build:electron`
 
 ### For Windows build when running Mac
 
--  To launch for development, run Windows in a virtual machine and run development process there
--  To build for production, uncomment the `platform: 'win32'` line in `quasar.conf.js` and run `quasar build -m electron`
+- To launch for development, run Windows in a virtual machine and run development process there
+- To build for production, uncomment the `platform: 'win32'` line in `quasar.conf.js` and run `npm run build:electron`
 
 ## iOS (Mac only)
 
--  To launch for development, install Xcode and run `quasar dev -m ios`
--  To build for production, run `quasar build -m ios`
+- To launch for development, install Xcode and run `npm run dev:ios`
+- To build for production, run `npm run build:ios`
 
 ## Android
 
--  To launch for development, install Android Studio, Android File Transfer, setup and launch Android Virtual Device, and run `quasar dev -m android`
--  To build for production, run `quasar build -m android`
+- To launch for development, install Android Studio, Android File Transfer, setup and launch Android Virtual Device, and run `npm run dev:android`
+- To build for production, run `npm run build:android`
 
 ## Icons
 
--  To regenerate icons & splash screens, run `yarn icons`
+- To regenerate icons & splash screens, run `npm run icons`

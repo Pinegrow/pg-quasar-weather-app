@@ -1,14 +1,11 @@
 <script setup>
-  const props = defineProps({
+  defineProps({
     icon: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   })
-
 </script>
-
 <template>
-  <div :class="icon"></div>
+    <div :class="icon"></div>
 </template>
-
