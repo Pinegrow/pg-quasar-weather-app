@@ -1,47 +1,53 @@
 <template>
-    <q-page class="flex column" :class="bgClass">
-        <q-inner-loading :showing="searching" color="white"/>
-        <section class="col q-pt-lg q-px-md">
-            <q-input v-model="searchText" borderless dark placeholder="Search" @keyup.enter="getWeatherBySearch">
-                <template v-slot:before>
-                    <q-icon name="my_location" @click="getLocation"/>
-                </template>
-                <template v-slot:append>
-                    <q-btn round dense flat icon="search" @click="getWeatherBySearch"/>
-                </template>
-            </q-input>
-        </section>
-        <template v-if="weatherData">
-            <section class="col text-white text-center">
-                <div class="text-h4 text-weight-light">{{ weatherData.name }}</div>
-                <div class="text-h6 text-weight-light">
-                    {{ weatherData.weather[0].main }}
-</div>
-                <div class="text-h1 text-weight-thin q-my-lg relative-position">
-                    <span>{{ temp }}</span><span class="text-h4 relative-position degree">&deg;F</span>
-                </div>
-            </section>
-            <section class="col text-center">
-                <q-img :src="weatherImage" alt="Weather Image" width="100px"/>
-            </section>
+  <q-page class="flex column" :class="bgClass">
+    <q-inner-loading :showing="searching" color="white" />
+    <section class="col q-pt-lg q-px-md">
+      <q-input
+        v-model="searchText"
+        borderless
+        dark
+        placeholder="Search"
+        @keyup.enter="getWeatherBySearch"
+      >
+        <template v-slot:before>
+          <q-icon name="my_location" @click="getLocation" />
         </template>
-        <template v-else>
-            <section class="col column text-center text-white">
-                <div class="col text-h2 text-weight-thin">Quasar<br/>Weather
-                </div>
-                <q-btn class="col" flat @click="getLocation">
-                    <q-icon left size="3em" name="my_location"/>
-                    <div>Find My Location</div>
-                </q-btn>
-            </section>
+        <template v-slot:append>
+          <q-btn round dense flat icon="search" @click="getWeatherBySearch" />
         </template>
-        <section class="col skyline"></section>
-    </q-page>
+      </q-input>
+    </section>
+    <template v-if="weatherData">
+      <section class="col text-white text-center">
+        <div class="text-h4 text-weight-light">{{ weatherData.name }}</div>
+        <div class="text-h6 text-weight-light">
+          {{ weatherData.weather[0].main }}
+        </div>
+        <div class="text-h1 text-weight-thin q-my-lg relative-position">
+          <span>{{ temp }}</span
+          ><span class="text-h4 relative-position degree">&deg;F</span>
+        </div>
+      </section>
+      <section class="col text-center">
+        <q-img :src="weatherImage" alt="Weather Image" width="100px" />
+      </section>
+    </template>
+    <template v-else>
+      <section class="col column text-center text-white">
+        <div class="col text-h2 text-weight-thin">Quasar<br />Weather</div>
+        <q-btn class="col" flat @click="getLocation">
+          <q-icon left size="3em" name="my_location" />
+          <div>Find My Location</div>
+        </q-btn>
+      </section>
+    </template>
+    <section class="col skyline"></section>
+  </q-page>
 </template>
 <script>
   import { computed, defineComponent, inject, ref } from 'vue'
   import { useQuasar } from 'quasar'
-  import Icon from 'components/Icon.vue'
+  import Icon from '@/components/Icon.vue'
 
   export default defineComponent({
     name: 'Index',

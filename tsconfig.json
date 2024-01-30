@@ -9,11 +9,5 @@
       "~/*": ["./src/*"],
       "~~/*": ["./*"]
     }
-  },
-  "include": [
-    //...
-    /* Please ensure that you update the filenames and paths to accurately match those used in your project. */
-    "auto-imports.d.ts",
-    "components.d.ts"
-  ]
+  }
 }
