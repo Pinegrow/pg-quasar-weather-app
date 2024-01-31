@@ -7,5 +7,5 @@
   })
 </script>
 <template>
-    <div :class="icon"></div>
+  <div :class="icon"></div>
 </template>

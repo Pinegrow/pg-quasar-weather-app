@@ -18,8 +18,9 @@
     "build:ios": "quasar build -m ios",
     "build:android": "quasar build -m android",
     "preview": "quasar serve --history",
-    "lint": "eslint --ext .js,.ts,.vue ./  --ignore-path .gitignore",
-    "format": "prettier --write \"**/*.{js,ts,vue,css,html,md,json}\" --ignore-path .gitignore",
+    "lint": "npm run lint:fix && npm run format",
+    "lint:fix": "eslint --fix --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts ./ --ignore-path .gitignore",
+    "format": "prettier --write \"**/*.{vue,js,jsx,cjs,mjs,ts,tsx,cts,mts,html,css,md,mdx,json}\" !public --ignore-path .gitignore",
     "test": "echo \"No test specified\" && exit 0",
     "icons": "icongenie g -i icon.png --theme-color 00B4DB --skip-trim"
   },
