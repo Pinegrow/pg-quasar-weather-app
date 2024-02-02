@@ -82,6 +82,8 @@ module.exports = configure(function (ctx) {
         [
           require('@pinegrow/vite-plugin').liveDesigner,
           {
+            iconPreferredCase: 'unocss', // default value (can be removed), unocss by default uses the unocss format for icon names
+            devtoolsKey: 'devtoolsKey',
             quasar: {
               /* Please ensure that you update the filenames and paths to accurately match those used in your project. */
               configPath: 'quasar.config.js',
@@ -89,8 +91,6 @@ module.exports = configure(function (ctx) {
               // restartOnConfigUpdate: true,
               restartOnThemeUpdate: true,
             },
-            devtoolsKey: 'devtoolsKey',
-            //... existing config
           },
         ],
         [
@@ -138,9 +138,9 @@ module.exports = configure(function (ctx) {
             ],
             dirs: [
               /* Please ensure that you update the filenames and paths to accurately match those used in your project. */
-              // 'src/composables',
-              // 'src/utils',
-              // 'src/stores',
+              'src/composables',
+              'src/utils',
+              'src/stores',
             ],
             vueTemplate: true,
             dts: 'auto-imports.d.ts',
@@ -157,6 +157,7 @@ module.exports = configure(function (ctx) {
           },
         ],
       ],
+
       alias: {
         /* Must be either an object, or an array of { find, replacement, customResolver } pairs. */
         /* Refer to: https://vitejs.dev/config/shared-options.html#resolve-alias */
@@ -280,7 +281,7 @@ module.exports = configure(function (ctx) {
       builder: {
         // https://www.electron.build/configuration/configuration
 
-        appId: 'dannys-weather-app-v2',
+        appId: 'pg-quasar-weather-app',
       },
     },
 
