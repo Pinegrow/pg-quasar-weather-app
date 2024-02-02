@@ -56,8 +56,8 @@ For iOS (Mac only) - install Xcode before starting development server
 For Android - install Android Studio, Android File Transfer, setup and launch Android Virtual Device, and then start the development server
 
 ```bash
-npm run dev # Web - SPA,
-npm run dev:ssr # Web - SSR SPA,
+npm run dev # Web - SPA
+npm run dev:ssr # Web - SSR SPA
 npm run dev:electron # Desktop
 npm run dev:ios # Mobile - ios
 npm run dev:android # Mobile - android
@@ -68,8 +68,8 @@ npm run dev:android # Mobile - android
 For Windows build when running Mac - uncomment the `platform: 'win32'` line in `quasar.config.js` and run `npm run build:electron`
 
 ```bash
-npm run build # Web - SPA,
-npm run build:ssr # Web - SSR SPA,
+npm run build # Web - SPA
+npm run build:ssr # Web - SSR SPA
 npm run build:electron # Desktop
 npm run build:ios # Mobile - ios
 npm run build:android # Mobile - android
