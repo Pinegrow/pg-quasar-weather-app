@@ -1,108 +1,87 @@
-<script>
-  import { computed, defineComponent, inject, ref } from 'vue'
+<script setup lang="ts">
+  import { computed, inject, ref } from 'vue'
   import { useQuasar, getCssVar } from 'quasar'
-  import Icon from '@/components/Icon.vue'
 
-  export default defineComponent({
-    name: 'Index',
-    components: {
-      Icon,
-    },
-    setup() {
-      const $q = useQuasar()
+  const $q = useQuasar()
 
-      const axios = inject('axios')
+  const axios = inject('axios')
 
-      const searching = ref(false)
-      const searchText = ref('')
-      const weatherData = ref(null)
-      const lat = ref(null)
-      const lon = ref(null)
+  const searching = ref(false)
+  const searchText = ref('')
+  const weatherData = ref(null)
+  const lat = ref(null)
+  const lon = ref(null)
 
-      const weatherApiKey = 'b6cd22634f8f1c9a74704828f7f0523e'
-      const weatherApiBaseUrl = 'https://api.openweathermap.org/data/2.5'
-      const geoApiBaseUrl = 'https://freegeoip.app/json/'
+  const weatherApiKey = 'b6cd22634f8f1c9a74704828f7f0523e'
+  const weatherApiBaseUrl = 'https://api.openweathermap.org/data/2.5'
+  const geoApiBaseUrl = 'https://freegeoip.app/json/'
 
-      const temp = computed(() => {
-        return Math.round(weatherData.value.main.temp)
-      })
-
-      const weatherImage = computed(() => {
-        const weatherApiBaseUrl = 'http://openweathermap.org/img/wn'
-        return `${weatherApiBaseUrl}/${weatherData.value.weather[0].icon}@2x.png`
-      })
-
-      const bgClass = computed(() => {
-        if (!weatherData.value) return null
-
-        if (weatherData.value.weather[0].icon.endsWith('n')) {
-          return 'bg-night'
-        } else {
-          return 'bg-day'
-        }
-      })
-
-      const getLocation = async () => {
-        searching.value = true
-        try {
-          if ($q.platform.is.electron) {
-            const result = await axios.get(geoApiBaseUrl)
-            lat.value = result.data.latitude
-            lon.value = result.data.longitude
-            getWeatherByCoords()
-            searching.value = false
-          } else {
-            navigator.geolocation.getCurrentPosition((position) => {
-              lat.value = position.coords.latitude
-              lon.value = position.coords.longitude
-              getWeatherByCoords()
-              searching.value = false
-            })
-          }
-        } catch (error) {}
-      }
-
-      const getWeatherBySearch = async () => {
-        try {
-          const endpoint = `${weatherApiBaseUrl}/weather?q=${searchText.value}&appid=${weatherApiKey}&units=imperial`
-          const response = await axios.get(endpoint)
-          weatherData.value = response.data
-          console.log('weatherData', weatherData.value)
-        } catch (error) {
-          console.error('getWeatherBySearch', error.message)
-          weatherData.value = null
-        }
-      }
-
-      const getWeatherByCoords = async () => {
-        try {
-          const endpoint = `${weatherApiBaseUrl}/weather?lat=${lat.value}&lon=${lon.value}&appid=${weatherApiKey}&units=imperial`
-          const response = await axios.get(endpoint)
-          weatherData.value = response.data
-          console.log('weatherData', weatherData.value)
-        } catch (error) {
-          console.error('getWeatherByCoords', error.message)
-          weatherData.value = null
-        }
-      }
-
-      const primary = getCssVar('primary')
-      const secondary = getCssVar('secondary')
-
-      return {
-        searching,
-        searchText,
-        weatherData,
-        temp,
-        weatherImage,
-        bgClass,
-        getLocation,
-        getWeatherBySearch,
-        primary,
-        secondary,
-      }
-    },
+  const temp = computed(() => {
+    const fahrenheit = Math.round(weatherData.value.main.temp)
+    return (((fahrenheit - 32) * 5) / 9).toFixed(2)
   })
+
+  const weatherImage = computed(() => {
+    const weatherApiBaseUrl = 'http://openweathermap.org/img/wn'
+    return `${weatherApiBaseUrl}/${weatherData.value.weather[0].icon}@2x.png`
+  })
+
+  const bgClass = computed(() => {
+    if (!weatherData.value) return null
+
+    if (weatherData.value.weather[0].icon.endsWith('n')) {
+      return 'bg-night'
+    } else {
+      return 'bg-day'
+    }
+  })
+
+  const getLocation = async () => {
+    searching.value = true
+    try {
+      if ($q.platform.is.electron) {
+        const result = await axios.get(geoApiBaseUrl)
+        lat.value = result.data.latitude
+        lon.value = result.data.longitude
+        getWeatherByCoords()
+        searching.value = false
+      } else {
+        navigator.geolocation.getCurrentPosition((position) => {
+          lat.value = position.coords.latitude
+          lon.value = position.coords.longitude
+          getWeatherByCoords()
+          searching.value = false
+        })
+      }
+    } catch (error) {}
+  }
+
+  const getWeatherBySearch = async () => {
+    try {
+      const endpoint = `${weatherApiBaseUrl}/weather?q=${searchText.value}&appid=${weatherApiKey}&units=imperial`
+      const response = await axios.get(endpoint)
+      weatherData.value = response.data
+      console.log('weatherData', weatherData.value)
+    } catch (error) {
+      console.error('getWeatherBySearch', error.message)
+      weatherData.value = null
+    }
+  }
+
+  const getWeatherByCoords = async () => {
+    try {
+      const endpoint = `${weatherApiBaseUrl}/weather?lat=${lat.value}&lon=${lon.value}&appid=${weatherApiKey}&units=imperial`
+      const response = await axios.get(endpoint)
+      weatherData.value = response.data
+      console.log('weatherData', weatherData.value)
+    } catch (error) {
+      console.error('getWeatherByCoords', error.message)
+      weatherData.value = null
+    }
+  }
+
+  const primary = getCssVar('primary')
+  const secondary = getCssVar('secondary')
 </script>
 <template>
   <q-page class="flex column" :class="bgClass">
@@ -131,7 +110,7 @@
         </div>
         <div class="text-h1 text-weight-thin q-my-lg relative-position">
           <span>{{ temp }}</span>
-          <span class="text-h4 relative-position degree">&deg;F</span>
+          <span class="text-h4 relative-position degree">&deg;C</span>
         </div>
       </section>
       <section class="col text-center">
@@ -141,7 +120,7 @@
     <template v-else>
       <section class="col column text-center text-white">
         <div class="col text-h2 text-weight-thin">Quasar<br />Weather</div>
-        <q-btn class="col" flat @click="getLocation">
+        <q-btn class="col" flat v-on:click="getLocation">
           <q-icon left size="3em" name="my_location" />
           <div>Find My Location</div>
         </q-btn>
