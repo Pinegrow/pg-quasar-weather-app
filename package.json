@@ -13,7 +13,7 @@
     "dev": "quasar dev",
     "dev:ssr": "quasar dev -m ssr",
     "dev:electron": "quasar dev -m electron",
-    "dev:ios": "quasar dev -m ios",
+    "dev:ios": "quasar dev -m ios -e iPhone-14",
     "dev:android": "quasar dev -m android",
     "now": "npm run build && npm run preview",
     "lighthouse:dev": "npx unlighthouse --no-cache --site http://localhost:9000",
@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "@iconify/json": "^2.2.176",
-    "@pinegrow/quasar-module": "^3.0.41",
+    "@pinegrow/quasar-module": "^3.0.42",
     "@quasar/app-vite": "^1.7.0",
     "@types/node": "^20.11.13",
     "@typescript-eslint/eslint-plugin": "^5.10.0",
