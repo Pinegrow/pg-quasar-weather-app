@@ -23,7 +23,7 @@
     "build:electron": "quasar build -m electron",
     "build:ios": "quasar build -m ios",
     "build:android": "quasar build -m android",
-    "preview": "quasar serve --history",
+    "preview": "quasar serve dist/spa --history",
     "icons": "icongenie g -i icon.png --theme-color 00B4DB --skip-trim",
     "vue-devtools": "vue-devtools",
     "lint": "npm run lint:fix && npm run format",
