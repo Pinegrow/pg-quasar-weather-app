@@ -175,6 +175,15 @@ module.exports = configure(function (ctx) {
             ],
           },
         ],
+        [
+          require('vite-plugin-vue-devtools'),
+          /* Don't use Vite devtools and Standalone Vue devtools (electron) at the same time */
+          {
+            // For details, refer to https://devtools-next.vuejs.org/guide/vite-plugin#options
+            // appendTo: 'devtools.js',
+            //...
+          },
+        ],
       ],
 
       alias: {

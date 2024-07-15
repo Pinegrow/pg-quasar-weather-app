@@ -43,7 +43,8 @@
   },
   "devDependencies": {
     "@iconify/json": "^2.2.176",
-    "@pinegrow/quasar-module": "^3.0.56",
+    "@pinegrow/quasar-module": "^3.0.60",
+    "@pinegrow/tailwindcss-plugin": "^3.0.29",
     "@quasar/app-vite": "^1.7.0",
     "@types/node": "^20.11.13",
     "@typescript-eslint/eslint-plugin": "^5.10.0",
@@ -61,6 +62,7 @@
     "unocss": "^0.58.4",
     "unplugin-auto-import": "^0.17.5",
     "unplugin-vue-components": "^0.26.0",
+    "vite-plugin-vue-devtools": "^7.3.6",
     "workbox-build": "^7.0.0",
     "workbox-cacheable-response": "^7.0.0",
     "workbox-core": "^7.0.0",
