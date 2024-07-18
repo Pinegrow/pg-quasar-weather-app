@@ -44,7 +44,6 @@
   "devDependencies": {
     "@iconify/json": "^2.2.176",
     "@pinegrow/quasar-module": "^3.0.60",
-    "@pinegrow/tailwindcss-plugin": "^3.0.29",
     "@quasar/app-vite": "^1.7.0",
     "@types/node": "^20.11.13",
     "@typescript-eslint/eslint-plugin": "^5.10.0",
