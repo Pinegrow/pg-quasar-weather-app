@@ -1,0 +1,137 @@
+{
+  "files": {
+    "src/pages/Index.vue": {
+      "frameworks": [
+        "@vue/devtools",
+        "pg.insight.events",
+        "@unocss/preset-icons",
+        "pg.vue.tree.painter",
+        "@pinegrow/vite-plugin",
+        "project",
+        "vue",
+        "pg.css.grid",
+        "app_designer",
+        "quasar",
+        "pg.image.overlay",
+        "pg.code-validator",
+        "pg.project.items",
+        "pg.asset.manager",
+        "pg.html"
+      ],
+      "last_page_width": 320
+    },
+    "src/App.vue": {
+      "frameworks": [
+        "@vue/devtools",
+        "pg.insight.events",
+        "@unocss/preset-icons",
+        "pg.vue.tree.painter",
+        "@pinegrow/vite-plugin",
+        "project",
+        "pg.css.grid",
+        "quasar",
+        "pg.image.overlay",
+        "pg.code-validator",
+        "pg.project.items",
+        "vue",
+        "pg.asset.manager",
+        "app_designer",
+        "pg.html"
+      ]
+    },
+    "src/components/Icon.vue": {
+      "frameworks": [
+        "@vue/devtools",
+        "@unocss/preset-icons",
+        "unplugin-auto-import",
+        "unplugin-vue-components",
+        "@pinegrow/quasar-module",
+        "quasar",
+        "vue",
+        "app_designer",
+        "project",
+        "pg.insight.events",
+        "pg.vue.tree.painter",
+        "pg.css.grid",
+        "pg.image.overlay",
+        "pg.code-validator",
+        "pg.project.items",
+        "pg.asset.manager",
+        "pg.html"
+      ]
+    },
+    "src/pages/IndexPage.vue": {
+      "frameworks": [
+        "vite-plugin-vue-devtools",
+        "pg.insight.events",
+        "pg.vue.tree.painter",
+        "@vue/devtools",
+        "project",
+        "unplugin-auto-import",
+        "pg.css.grid",
+        "pg.image.overlay",
+        "pg.code-validator",
+        "pg.project.items",
+        "@pinegrow/quasar-module",
+        "pg.asset.manager",
+        "app_designer",
+        "vue",
+        "unplugin-vue-components",
+        "@unocss/preset-icons",
+        "tw.flowbite",
+        "quasar",
+        "pg.html"
+      ]
+    }
+  },
+  "breakpoints": ["600px", "1024px", "1440px", "1920px"],
+  "frameworks": [
+    "vite-plugin-vue-devtools",
+    "pg.insight.events",
+    "pg.vue.tree.painter",
+    "@vue/devtools",
+    "project",
+    "unplugin-auto-import",
+    "pg.css.grid",
+    "pg.image.overlay",
+    "pg.code-validator",
+    "pg.project.items",
+    "@pinegrow/quasar-module",
+    "pg.asset.manager",
+    "app_designer",
+    "vue",
+    "unplugin-vue-components",
+    "@unocss/preset-icons",
+    "tw.flowbite",
+    "quasar",
+    "pg.html"
+  ],
+  "urls": {
+    "src/pages/Index.vue": { "open-page-views": [{ "w": 320, "h": 0 }] },
+    "src/App.vue": { "open-page-views": [{ "w": 1024, "h": 0 }] },
+    "src/components/Icon.vue": { "open-page-views": [{ "w": 1024, "h": 0 }] },
+    "src/pages/IndexPage.vue": { "open-page-views": [{ "w": 758, "h": 0 }] },
+    "http://172.20.10.9:9400/#/": { "open-page-views": [{ "w": 768, "h": 0 }] }
+  },
+  "template_framework_id": "vue",
+  "open-pages": ["src/pages/IndexPage.vue"],
+  "recent-classes": [
+    "text-weight-medium",
+    "text-weight-bold",
+    "text-weight-bolder",
+    "text-weight-thin",
+    "text-weight-light",
+    "text-h2",
+    "text-h1",
+    "text-h3",
+    "bg-negative",
+    "bg-secondary",
+    "bg-accent",
+    "bg-yellow",
+    "bg-pink-8",
+    "text-deep-purple-7",
+    "text-capitalize",
+    "text-lowercase"
+  ],
+  "active-design-provider": "quasar"
+}

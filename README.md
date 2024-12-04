@@ -33,10 +33,10 @@ npm install #or use pnpm
 
 (or)
 
-If you prefer a blank template (a single empty home page) instead,
+If you prefer a minimal template (a single empty home page) instead,
 
 ```bash
-npx giget@latest gh:pinegrow/pg-quasar#blank my-quasar-app #project-name
+npx giget@latest gh:pinegrow/pg-quasar#minimal my-quasar-app #project-name
 cd my-quasar-app
 npm install #or use pnpm
 ```

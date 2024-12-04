@@ -16,7 +16,6 @@
     "dev:ios": "quasar dev -m ios -e iPhone-14",
     "dev:android": "quasar dev -m android",
     "now": "npm run build && npm run preview",
-    "lighthouse:dev": "npx unlighthouse --no-cache --site http://localhost:9000",
     "lighthouse": "npx unlighthouse --no-cache --site https://pg-quasar-weather-app.netlify.app",
     "build": "quasar build",
     "build:ssr": "quasar build -m ssr",
@@ -43,7 +42,7 @@
   },
   "devDependencies": {
     "@iconify/json": "^2.2.176",
-    "@pinegrow/quasar-module": "^3.0.60",
+    "@pinegrow/quasar-module": "^3.0.65",
     "@quasar/app-vite": "^1.7.0",
     "@types/node": "^20.11.13",
     "@typescript-eslint/eslint-plugin": "^5.10.0",

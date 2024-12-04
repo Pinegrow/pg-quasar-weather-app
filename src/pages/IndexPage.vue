@@ -109,8 +109,8 @@
           {{ weatherData.weather[0].main }}
         </div>
         <div class="text-h1 text-weight-thin q-my-lg relative-position">
-          <span>{{ temp }}</span>
-          <span class="text-h4 relative-position degree">&deg;C</span>
+          <span>{{ temp }}</span
+          ><span class="text-h4 relative-position degree">&deg;C</span>
         </div>
       </section>
       <section class="col text-center">
@@ -120,7 +120,7 @@
     <template v-else>
       <section class="col column text-center text-white">
         <div class="col text-h2 text-weight-thin">Quasar<br />Weather</div>
-        <q-btn class="col" flat v-on:click="getLocation">
+        <q-btn flat v-on:click="getLocation" class="col">
           <q-icon left size="3em" name="my_location" />
           <div>Find My Location</div>
         </q-btn>
