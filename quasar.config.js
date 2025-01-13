@@ -102,7 +102,6 @@ module.exports = configure(function (ctx) {
           require('@pinegrow/vite-plugin').liveDesigner,
           {
             iconPreferredCase: 'unocss', // default value (can be removed), unocss by default uses the unocss format for icon names
-            devtoolsKey: 'devtoolsKey',
             quasar: {
               /* Please ensure that you update the filenames and paths to accurately match those used in your project. */
               configPath: 'quasar.config.js',
@@ -151,8 +150,7 @@ module.exports = configure(function (ctx) {
               // 'vue-router',
               // 'vue-i18n',
               // 'vue/macros',
-              // '@vueuse/head',
-              // '@vueuse/core',
+              '@vueuse/core',
               // 'pinia',
             ],
             dirs: [
