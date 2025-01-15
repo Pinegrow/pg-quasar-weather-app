@@ -5,6 +5,7 @@
     "antfu.file-nesting",
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
+    "bradlc.vscode-tailwindcss",
     "editorconfig.editorconfig",
     "wayou.vscode-todo-highlight"
   ],

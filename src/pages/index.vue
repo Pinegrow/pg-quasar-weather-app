@@ -1,10 +1,10 @@
 <script setup lang="ts">
-  import { computed, inject, ref } from 'vue'
+  // @ts-nocheck
+  import { computed, ref } from 'vue'
   import { useQuasar, getCssVar } from 'quasar'
+  import { api } from 'boot/axios'
 
   const $q = useQuasar()
-
-  const axios = inject('axios')
 
   const searching = ref(false)
   const searchText = ref('')
@@ -40,7 +40,7 @@
     searching.value = true
     try {
       if ($q.platform.is.electron) {
-        const result = await axios.get(geoApiBaseUrl)
+        const result = await api.get(geoApiBaseUrl)
         lat.value = result.data.latitude
         lon.value = result.data.longitude
         getWeatherByCoords()
@@ -53,13 +53,15 @@
           searching.value = false
         })
       }
-    } catch (error) {}
+    } catch (err) {
+      // err
+    }
   }
 
   const getWeatherBySearch = async () => {
     try {
       const endpoint = `${weatherApiBaseUrl}/weather?q=${searchText.value}&appid=${weatherApiKey}&units=imperial`
-      const response = await axios.get(endpoint)
+      const response = await api.get(endpoint)
       weatherData.value = response.data
       console.log('weatherData', weatherData.value)
     } catch (error) {
@@ -71,7 +73,7 @@
   const getWeatherByCoords = async () => {
     try {
       const endpoint = `${weatherApiBaseUrl}/weather?lat=${lat.value}&lon=${lon.value}&appid=${weatherApiKey}&units=imperial`
-      const response = await axios.get(endpoint)
+      const response = await api.get(endpoint)
       weatherData.value = response.data
       console.log('weatherData', weatherData.value)
     } catch (error) {
@@ -94,10 +96,10 @@
         placeholder="Search"
         @keyup.enter="getWeatherBySearch"
       >
-        <template v-slot:before>
+        <template #before>
           <q-icon name="my_location" @click="getLocation" />
         </template>
-        <template v-slot:append>
+        <template #append>
           <q-btn round dense flat icon="search" @click="getWeatherBySearch" />
         </template>
       </q-input>
@@ -120,7 +122,7 @@
     <template v-else>
       <section class="col column text-center text-white">
         <div class="col text-h2 text-weight-thin">Quasar<br />Weather</div>
-        <q-btn flat v-on:click="getLocation" class="col">
+        <q-btn flat class="col" @click="getLocation">
           <q-icon left size="3em" name="my_location" />
           <div>Find My Location</div>
         </q-btn>

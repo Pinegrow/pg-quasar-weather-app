@@ -10,7 +10,9 @@ try {
       require('path').join(app.getPath('userData'), 'DevTools Extensions'),
     )
   }
-} catch (_) {}
+} catch (err) {
+  err
+}
 
 let mainWindow
 
